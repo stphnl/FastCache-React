@@ -1,5 +1,26 @@
 import React from "react";
+import Button from "./Button";
 
-const AddBookmark = () => {};
+const AddBookmark = () => {
+  const handleAddBookmark = () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const currentTab = tabs[0];
+      const title = currentTab.title;
+      const url = currentTab.url;
+      localStorage.setItem(title, url);
+    });
+  };
+
+  return (
+    <section className="add-bookmark-container">
+      <Button
+        type="add"
+        text="+"
+        handleClick={handleAddBookmark}
+      />
+      <p>Add Link</p>
+    </section>
+  );
+};
 
 export default AddBookmark;

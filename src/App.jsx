@@ -1,12 +1,16 @@
 import React from "react";
+import AddBookmark from "./components/AddBookmark";
+import BookmarkContainer from "./components/BookmarkContainer";
 
 const App = () => {
   return (
-    <>
-      <h1>FastCache</h1>
-      <AddBookmark />
+    <div className="app-container">
+      <header>
+        <h1>FastCache</h1>
+        <AddBookmark />
+      </header>
       <BookmarkContainer />
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Bookmark from "./BookMark";
 
-const BookmarkContainer = () => {};
+const BookmarkContainer = () => {
+  const [bookmarks, setBookmarks] = useState(Object.entries(localStorage));
+
+  useEffect(() => {
+    setBookmarks(Object.entries(localStorage));
+  }, []);
+
+  return (
+    <main className="bookmark-container">
+      <ul className="bookmark-list">
+        {bookmarks.map((bookmark) => (
+          <Bookmark
+            key={bookmark[0] + bookmark[1]}
+            webTitle={bookmark[0]}
+            webLink={bookmark[1]}
+          />
+        ))}
+      </ul>
+    </main>
+  );
+};
 
 export default BookmarkContainer;
