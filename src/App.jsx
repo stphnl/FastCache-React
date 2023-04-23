@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 import AddBookmark from "./components/AddBookmark";
 import BookmarkContainer from "./components/BookmarkContainer";
 

@@ -4,6 +4,9 @@ import Button from "./Button";
 const Bookmark = ({ webTitle, webLink }) => {
   const handleRemoveBookmark = () => {
     localStorage.removeItem(webTitle);
+
+    const storageEvent = new StorageEvent("storage");
+    window.dispatchEvent(storageEvent);
   };
 
   return (

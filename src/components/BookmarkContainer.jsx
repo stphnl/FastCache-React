@@ -5,7 +5,16 @@ const BookmarkContainer = () => {
   const [bookmarks, setBookmarks] = useState(Object.entries(localStorage));
 
   useEffect(() => {
-    setBookmarks(Object.entries(localStorage));
+    const handleStorageEvent = () => {
+      const newBookMarks = Object.entries(localStorage);
+      setBookmarks(newBookMarks);
+    };
+
+    window.addEventListener("storage", handleStorageEvent);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageEvent);
+    };
   }, []);
 
   return (

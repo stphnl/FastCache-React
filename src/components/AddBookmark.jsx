@@ -5,9 +5,13 @@ const AddBookmark = () => {
   const handleAddBookmark = () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const currentTab = tabs[0];
+
       const title = currentTab.title;
       const url = currentTab.url;
       localStorage.setItem(title, url);
+
+      const storageEvent = new StorageEvent("storage");
+      window.dispatchEvent(storageEvent);
     });
   };
 

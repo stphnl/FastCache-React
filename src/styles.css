@@ -1,0 +1,32 @@
+body {
+  margin: 0 0.5em;
+}
+
+#root {
+  width: 30em;
+  height: 20em;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-bookmark-container {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.add-bookmark-container::before,
+.add-bookmark-container::after {
+  content: "";
+  height: 2px;
+  color: black;
+}
+
+h1 {
+  margin: 0.5em 0.5em;
+  font-size: 1.25em;
+}
