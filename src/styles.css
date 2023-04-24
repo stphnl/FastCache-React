@@ -7,35 +7,25 @@ body {
 
 #root {
   width: 30em;
-  height: 20em;
+  height: 21.5em;
 }
 
-.button {
-  cursor: pointer;
-  border: 1.5px solid #e9e9ea;
-  background-color: #3e4d58;
-
-}
-
-.add {
-  width: 15em;
-  height: 2em;
-  border-radius: 10px;
-  color: #e9e9ea;
-}
-
-.delete {
-  border-radius: 2px;
-  color: #ea4336;
-}
-
-header {
+.app-container {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
 }
 
-.header {
+header {
+  display: flex;
+  row-gap: 1em;
+  align-items: center;
+  column-gap: 0.5em;
+  justify-content: space-between;
+  padding-right: 0.25em;
+}
+
+.logo-and-title {
   display: flex;
   align-items: center;
   column-gap: 0.5em;
@@ -46,14 +36,63 @@ header {
   width: 1em;
 }
 
-h1 {
+.title {
   font-size: 1em;
   margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  padding-top: 0.25em;
 }
 
 .add-bookmark-container {
   display: flex;
   align-self: center;
+}
+
+.button {
+  cursor: pointer;
+  border: 1.5px solid #e9e9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+}
+
+.add {
+  width: 15em;
+  height: 2em;
+  border-radius: 10px;
+  color: #e9e9ea;
+  background-color: #3e4d58;
+  letter-spacing: 0.1em;
+}
+
+.add:hover {
+  color: #3e4d58;
+  background-color: #19f0fc;
+}
+
+.add:active {
+  color: #e9e9ea;
+  background-color: #0a3e7e;
+}
+
+.delete {
+  border-radius: 2px;
+  background-color: #61727d;
+  color: #d74848;
+  font-size: 1.5em;
+  height: 1em;
+}
+
+.delete:hover {
+  background-color: #3e4d58;
+}
+
+.delete:active {
+  background-color: #61727d;
 }
 
 .add-bookmark-container::before,
@@ -74,20 +113,14 @@ h1 {
   top: 5.6em;
 }
 
-.bookmark-container {
-  margin-top: 1em;
-}
-
 .bookmark-list {
   display: flex;
   flex-direction: column;
-  row-gap: 0.75em;
   list-style: none;
-  padding-left: 1em;
-  padding-right: 1.25em;
   margin: 0;
-  height: 13em;
+  height: 14.25em;
   overflow-y: scroll;
+  padding: 0;
 }
 
 .bookmark-list li {
@@ -95,6 +128,13 @@ h1 {
   justify-content: space-between;
   align-items: center;
   column-gap: 1em;
+  padding: 0.5em 0em;
+  padding-left: 1em;
+  padding-right: 1.25em;
+}
+
+.bookmark-list li:nth-child(odd) {
+  background-color: #6f7f8a;
 }
 
 .bookmark-list li a {
