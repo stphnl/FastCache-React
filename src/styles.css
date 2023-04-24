@@ -1,5 +1,8 @@
 body {
   margin: 0 0.5em;
+  font-family: 'Palanquin', sans-serif;
+  background-color: #3e4d58;
+  color: #e9e9ea
 }
 
 #root {
@@ -7,26 +10,107 @@ body {
   height: 20em;
 }
 
+.button {
+  cursor: pointer;
+  border: 1.5px solid #e9e9ea;
+  background-color: #3e4d58;
+
+}
+
+.add {
+  width: 15em;
+  height: 2em;
+  border-radius: 10px;
+  color: #e9e9ea;
+}
+
+.delete {
+  border-radius: 2px;
+  color: #ea4336;
+}
+
 header {
   display: flex;
   flex-direction: column;
+  row-gap: 1em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.logo {
+  height: 1em;
+  width: 1em;
+}
+
+h1 {
+  font-size: 1em;
+  margin: 0;
 }
 
 .add-bookmark-container {
   display: flex;
   align-self: center;
-  align-items: center;
-  column-gap: 0.5em;
 }
 
 .add-bookmark-container::before,
 .add-bookmark-container::after {
   content: "";
-  height: 2px;
-  color: black;
+  position: absolute;
+  height: 1px;
+  background-color: lightgray;
+  width: 100%;
+  left: 0;
 }
 
-h1 {
-  margin: 0.5em 0.5em;
-  font-size: 1.25em;
+.add-bookmark-container::before {
+  top: 2.25em;
+}
+
+.add-bookmark-container::after {
+  top: 5.6em;
+}
+
+.bookmark-container {
+  margin-top: 1em;
+}
+
+.bookmark-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75em;
+  list-style: none;
+  padding-left: 1em;
+  padding-right: 1.25em;
+  margin: 0;
+  height: 13em;
+  overflow-y: scroll;
+}
+
+.bookmark-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.bookmark-list li a {
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.15em;
+}
+
+.bookmark-list li a:link,
+.bookmark-list li a:visited {
+  color: #e9e9ea;
+}
+
+.bookmark-list li a:hover {
+  text-decoration: underline;
+  color:#dcdcdc;
 }

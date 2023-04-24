@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, "extension/build"),
     filename: "bundle.js",
   },
-  mode: "development",
+  mode: "production",
   devtool: "source-map",
   module: {
     rules: [
@@ -25,6 +25,19 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "logo.png",
+              outputPath: "images/",
+            },
+          },
+        ],
       },
     ],
   },

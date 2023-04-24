@@ -19,10 +19,9 @@ const AddBookmark = () => {
     <section className="add-bookmark-container">
       <Button
         type="add"
-        text="+"
+        text="ADD LINK"
         handleClick={handleAddBookmark}
       />
-      <p>Add Link</p>
     </section>
   );
 };

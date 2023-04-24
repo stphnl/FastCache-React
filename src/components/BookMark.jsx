@@ -14,6 +14,7 @@ const Bookmark = ({ webTitle, webLink }) => {
       <a
         href={webLink}
         target="_blank"
+        rel="noreferrer"
       >
         {webTitle}
       </a>
