@@ -137,6 +137,10 @@ header {
   background-color: #6f7f8a;
 }
 
+.bookmark-list li:nth-child(even) {
+  background-color: #5c6972;
+}
+
 .bookmark-list li a {
   text-decoration: none;
   text-overflow: ellipsis;

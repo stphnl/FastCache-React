@@ -1,13 +1,13 @@
 import React from "react";
 import Button from "./Button";
 
-const Bookmark = ({ webTitle, webLink }) => {
+const Bookmark = ({ localStorageIndex, webTitle, webLink }) => {
   // Removes the link from the extension's local storage
   const handleRemoveBookmark = () => {
-    localStorage.removeItem(webTitle);
+    localStorage.removeItem(localStorageIndex);
 
     // Then, dispatches a 'storage' event to be intercepted by the event listener on 'BookmarkList'
-    const storageEvent = new StorageEvent("storage");
+    const storageEvent = new StorageEvent("removeStorage");
     window.dispatchEvent(storageEvent);
   };
 
