@@ -11,8 +11,8 @@ FastCache is lightweight, simple-to-use Bookmark Chrome Extension.
 FastCache is not on the Google Chrome Extension store. Please make sure [Developer Mode](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) is enabled on your Chrome browser.
 
 1. Copy the repository link and Git Clone on a terminal to your local machine
-2. 'cd' into 'FastCache-React' and run 'npm run build'
-3. Navigate to your Extension settings and 'Load unpacked' the 'extension' folder inside 'FastCache-React'
+2. `cd` into 'FastCache-React' and run `npm run build`
+3. Navigate to your Extension settings and `Load unpacked` the `extension` folder inside `FastCache-React`
 
 ## Usage
 
@@ -20,7 +20,7 @@ FastCache is not on the Google Chrome Extension store. Please make sure [Develop
 
 When you come across a website of interest, click the FastCache icon to open up the extension.
 
-Click the ADD LINK button to save the website.
+Click the `ADD LINK` button to save the website.
 
 When wanting to revisit the site, open the extension and click on the title of the website.
 
